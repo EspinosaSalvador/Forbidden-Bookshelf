@@ -1,4 +1,4 @@
-config/
+config
 controllers/
 db/
 models/
