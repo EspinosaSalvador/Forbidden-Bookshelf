@@ -1,0 +1,12 @@
+config/
+controllers/
+db/
+models/
+seeds/
+test/
+utils/
+views/
+public/css/
+public/img/
+public/js/
+controllers/api/
