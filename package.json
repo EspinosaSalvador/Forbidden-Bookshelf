@@ -1,23 +1,24 @@
 {
-  "name": "proyecto-2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "jest": "^29.5.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "postcss-nested": "^6.0.1",
-    "tailwindcss": "^3.2.7"
+    "name": "proyecto-2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "seed": "node seeds/index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "bcrypt": "^5.0.0",
+      "connect-session-sequelize": "^7.0.4",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-handlebars": "^5.2.0",
+      "express-session": "^1.17.1",
+      "handlebars": "^4.7.6",
+      "mysql2": "^2.2.5",
+      "sequelize": "^6.3.5"
+    }
   }
-}
