@@ -19,17 +19,20 @@ app.use(routes);
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "public/html/index.html"))
 );
-app.get("/signin", (req, res) =>
+app.get("/signin.html", (req, res) =>
   res.sendFile(path.join(__dirname, "public/html/signin.html"))
 );
-app.get("/FAQ", (req, res) =>
+app.get("/FAQ.html", (req, res) =>
   res.sendFile(path.join(__dirname, "public/html/FAQ.html"))
 );
-app.get("/team", (req, res) =>
+app.get("/team.html", (req, res) =>
   res.sendFile(path.join(__dirname, "public/html/team.html"))
 );
-app.get("/company", (req, res) =>
+app.get("/company.html", (req, res) =>
   res.sendFile(path.join(__dirname, "public/html/company.html"))
+);
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "public/html/404.html"))
 );
 
 sequelize.sync({ force: false }).then(() => {
