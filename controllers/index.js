@@ -14,5 +14,14 @@ router.get("/", async (req, res) => {
 router.get("/login", async (req, res) => {
   res.render("login");
 });
+router.get("/FAQ", async (req, res) => {
+  res.render("FAQ");
+});
+router.get("/company", async (req, res) => {
+  res.render("company");
+});
+router.get("/team", async (req, res) => {
+  res.render("team");
+});
 
 module.exports = router;

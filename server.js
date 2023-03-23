@@ -22,21 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
-app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/html/index.html"))
-);
-app.get("/signin.html", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/html/signin.html"))
-);
-app.get("/FAQ.html", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/html/FAQ.html"))
-);
-app.get("/team.html", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/html/team.html"))
-);
-app.get("/company.html", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/html/company.html"))
-);
+
 app.get("*", (req, res) => res.render("404"));
 
 sequelize.sync({ force: false }).then(() => {
