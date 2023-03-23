@@ -13,8 +13,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set Handlebars as the default template engine
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine("handlebars", hbs.engine);
+// Set the handlebars engine for express to use
+app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -36,9 +37,7 @@ app.get("/team.html", (req, res) =>
 app.get("/company.html", (req, res) =>
   res.sendFile(path.join(__dirname, "public/html/company.html"))
 );
-app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/html/404.html"))
-);
+app.get("*", (req, res) => res.render("404"));
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
