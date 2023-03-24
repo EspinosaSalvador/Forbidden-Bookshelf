@@ -1,5 +1,6 @@
 const Author = require ("./Author");
 const Book = require ("./Book");
+const User = require ("./Users")
 
 Author.hasMany(Book, {
     foreignkey: "author_id",
@@ -11,4 +12,4 @@ Book.belongsTo(Author, {
 });
 
 
-module.exports = {Author, Book};
+module.exports = {Author, Book, User};
