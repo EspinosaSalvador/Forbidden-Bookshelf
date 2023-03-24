@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-//Obtain all users to see DB
+//See all users who have singed up to the page
 router.get('/', async (req, res) => {
   try {
     const dbUserData = await User.findAll({
@@ -24,7 +24,8 @@ router.get('/', async (req, res) => {
 });
 
 
-// CREATE new user
+// Creates a new user by user name, email and the password and creates the session after adding the user
+//The password is hashed in the Users Model File
 router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -45,7 +46,9 @@ router.post('/', async (req, res) => {
 });
 
 
-// Login
+//Login function that checks the email and the password
+//If the email and password are wrong, they inform the user
+//If the email and password are correct, it informs the user they are logged in
 router.post('/login', async (req, res) => {
   try {
 
@@ -84,7 +87,7 @@ router.post('/login', async (req, res) => {
 
 
 
-// Logout
+// Logout function that destroys the session 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

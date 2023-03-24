@@ -1,8 +1,7 @@
 const router = require("express").Router();
 const { Author } = require("../../models");
 
-// ! get
-
+//Get all authors
 router.get("/", async (req, res) => {
   try {
     const authors = await Author.findAll();
@@ -12,9 +11,10 @@ router.get("/", async (req, res) => {
   }
 });
 
+//Get author by ID
 router.get("/:id", async (req, res) => {
   try {
-    // find one blog by id with associated products
+
     const authorid = await Author.findByPk(req.params.id);
 
     if (!authorid) {
@@ -27,7 +27,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// ! post
+//Post a new author 
 router.post("/", async (req, res) => {
   try {
     const { author_name } = req.body;
@@ -40,4 +40,5 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 module.exports = router;
