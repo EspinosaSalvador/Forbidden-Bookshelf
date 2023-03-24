@@ -1,10 +1,3 @@
-
-
-
-<!-- ! books carousel -->
-
-<div class="bg-stone">
-{{!-- CAROUSEL --}}
 <style>
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
@@ -71,29 +64,27 @@ img {vertical-align: middle;}
 </style>
 </head>
 <body>
-{{!-- 
+
 <h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p> --}}
+<p>Change image every 2 seconds:</p>
 
 <div class="slideshow-container">
 
-
-
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679622347/samples/landscapes/landscape-panorama.jpg" style="width:100%">
+  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/Ca29a8jXEAA7XRK_ygbqn9.jpg" style="width:100%">
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679622357/cld-sample-4.jpg" style="width:100%">
+  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/81KSwdILwIL_dcu4uu.jpg" style="width:100%">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679622358/cld-sample-5.jpg" style="width:100%">
+  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/51OwMSETOJL_rmnxrg.jpg" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
@@ -124,9 +115,12 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3000); // Change image every 2 seconds
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
+
+</body>
+
 {{!-- CAROUSEL --}}
   <div
     class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
@@ -209,3 +203,8 @@ function showSlides() {
   </div>
 </div>
 <!-- ! end of books -->
+{{!-- script --}}
+<body>
+ <script src="../../public/javascript/books.js"></script>
+ </body>
+ {{!--  --}}
