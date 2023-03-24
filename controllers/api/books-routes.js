@@ -1,7 +1,25 @@
 const router = require("express").Router();
 const { Book } = require("../../models");
+const dotenv = require("dotenv");
+
 
 // ! get
+// GET book information from Google Books API
+router.get("/getBooks", async (req, res) => {
+  console.log("TEST!")
+  try {
+    const apiKey = process.env.API_KEY;
+    const {searchQuery} = req.query;
+    const requestUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}`;
+    
+  const response = await fetch(requestUrl)
+  console.log(response)
+
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get("/", async (req, res) => {
   try {
@@ -82,5 +100,7 @@ router.post("/", async (req, res) => {
 //     res.status(404).end();
 //   }
 // });
+
+
 
 module.exports = router;
