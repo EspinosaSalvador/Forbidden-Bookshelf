@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Author } = require("../models");
+const { Author } = require("../../models");
 
 // ! get
 
