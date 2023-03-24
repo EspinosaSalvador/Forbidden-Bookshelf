@@ -1,3 +1,5 @@
+//Association between Author and Book Models and the foreign key
+//If an author is deleted, then all the books are deleted as wel;
 const Author = require ("./Author");
 const Book = require ("./Book");
 const User = require ("./Users")

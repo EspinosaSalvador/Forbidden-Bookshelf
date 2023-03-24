@@ -1,8 +1,7 @@
 const router = require("express").Router();
 const { Book } = require("../../models");
 
-// ! get
-
+//Get all books
 router.get("/", async (req, res) => {
   try {
     const books = await Book.findAll();
@@ -12,6 +11,7 @@ router.get("/", async (req, res) => {
   }
 });
 
+//Get all books by ID
 router.get("/:id", async (req, res) => {
   try {
     // find one blog by id with associated products
@@ -27,7 +27,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-// ! post
+//Post new books
 router.post("/", async (req, res) => {
   try {
     const { book_name, book_author } = req.body;
@@ -42,45 +42,5 @@ router.post("/", async (req, res) => {
   }
 });
 
-// router.post("/login", async (req, res) => {
-//   try {
-//     const userData = await User.findOne({ where: { email: req.body.email } });
-
-//     if (!userData) {
-//       res
-//         .status(400)
-//         .json({ message: "Incorrect email or password, please try again" });
-//       return;
-//     }
-
-//     const validPassword = await userData.checkPassword(req.body.password);
-
-//     if (!validPassword) {
-//       res
-//         .status(400)
-//         .json({ message: "Incorrect email or password, please try again" });
-//       return;
-//     }
-
-//     req.session.save(() => {
-//       req.session.user_id = userData.id;
-//       req.session.logged_in = true;
-
-//       res.json({ user: userData, message: "You are now logged in!" });
-//     });
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
-
-// router.post("/logout", (req, res) => {
-//   if (req.session.logged_in) {
-//     req.session.destroy(() => {
-//       res.status(204).end();
-//     });
-//   } else {
-//     res.status(404).end();
-//   }
-// });
 
 module.exports = router;
