@@ -7,9 +7,8 @@ USER STORY
 As a book lover and avid reader
 I WANT to manage my personal book collection,
 I WANT to create a personal account with a unique login so that I can securely access my bookshelf from any device,
-SO THAT I can search for books by title, author, or genre, and add them to my bookshelf with ease.
-SO THAT I can organize my bookshelf by creating shelves for different categories and keep track of my reading progress for my collection.
-Finally, I want to be able to back up my bookshelf data on a server, so that I never lose my book collection even if I switch devices.
+SO THAT I can search for books and add them to my bookshelf with ease.
+Finally, I want to be able to back-up my bookshelf data on a server, so that I never lose my book collection even if I switch devices.
 
 
 ## Table of Contents (Optional)
@@ -23,11 +22,15 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+This API can be accessed through a website, so the final user does not need to install any software other than a web browser and have internet access.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+First go to the site [Add link name here](https://choosealicense.com/).
+Then click on log in.
+Sign in if you are a new user.
+If you are not a new user, log in into your account.
+You will see a picture carousel that shows
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
@@ -60,10 +63,6 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 ## Features
 
 If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
 ## Tests
 

@@ -12,6 +12,8 @@ router.get("/getBooks", async (req, res) => {
     const apiKey = process.env.API_KEY;
     const {searchQuery} = req.query;
     const requestUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}`;
+    // TODO: Try with  const requestUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}&fields=items(volumeInfo(title,authors,description,imageLinks(thumbnail)))`;
+
     
   const response = await fetch(requestUrl)
   const data = await response.json()
