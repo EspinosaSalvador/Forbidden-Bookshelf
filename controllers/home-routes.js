@@ -5,6 +5,8 @@ const { User } = require("../models");
 
 //Renders main page
 router.get("/", async (req, res) => {
+
+
   res.render("books");
 });
 

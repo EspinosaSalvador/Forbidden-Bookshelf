@@ -14,7 +14,9 @@ router.get("/getBooks", async (req, res) => {
     const requestUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}`;
     
   const response = await fetch(requestUrl)
-  console.log(response)
+  const data = await response.json()
+
+  console.log(data)
 
     res.status(200).json(data);
   } catch (err) {
