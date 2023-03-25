@@ -1,3 +1,7 @@
+//User Table to register the users that are entering the page
+//We are using hashing to decrypt the password 
+//If we use the API to obtain the users, the password will be encrypted
+
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');

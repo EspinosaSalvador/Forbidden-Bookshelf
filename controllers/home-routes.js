@@ -3,27 +3,29 @@ const { Author } = require('../models');
 const { Book } = require('../models')
 const { User } = require("../models");
 
-//Books main page
+//Renders main page
 router.get("/", async (req, res) => {
+
+
   res.render("books");
 });
 
-//Login Page
+//Renders login Page
 router.get('/login', (req, res) => {
   res.render('login');
 });
 
-//FAQ Page
+//Renders the FAQ Page
 router.get("/FAQ", async (req, res) => {
   res.render("FAQ");
 });
 
-//Company Page
+//Renders the Company Page
 router.get("/company", async (req, res) => {
   res.render("company");
 });
 
-//Team page
+//Renders the team Page
 router.get("/team", async (req, res) => {
   res.render("team");
 });

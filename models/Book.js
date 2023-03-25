@@ -1,3 +1,5 @@
+//Model to create book table and will have a column for ID, bookname and the book author
+//For the book author, we are using the primary key to link the Author to the book
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

@@ -1,3 +1,5 @@
+//Create seeds for authors in order to have information in the database to start the page
+
 const { Author } = require('../models');
 
 const authordata = [
