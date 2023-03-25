@@ -91,6 +91,17 @@
         {{/if}}
 
       </nav>
+      <div class="center">
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <button
+          type="button"
+          class="rounded-md bg-indigo-600 py-1.5 px-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >Search!</button>
+      </div>
+
+      <ul id="searchResults">
+        <!-- search results will be displayed here -->
+      </ul>
       <!-- Mobile menu, show/hide based on menu open state. -->
       <div class="lg:hidden" role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
@@ -441,8 +452,9 @@
 
     </footer>
     <script src="/js/login.js"></script>
-    <!-- ! end of footer -->
     <script src="../../public/javascript/books.js"></script>
+    <!-- ! end of footer -->
+
   </body>
 
 </html>
