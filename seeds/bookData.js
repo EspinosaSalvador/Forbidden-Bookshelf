@@ -1,3 +1,5 @@
+//Seeds to add information to the book table to start the application 
+
 const { Book } = require('../models');
 
 const bookdata = [
