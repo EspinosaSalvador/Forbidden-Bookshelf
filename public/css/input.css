@@ -99,5 +99,8 @@ img {
   align-items: center;
   flex-direction: column;
 }
+.center button {
+  margin-left: 300px;
+}
 
 /* search button to the side */
