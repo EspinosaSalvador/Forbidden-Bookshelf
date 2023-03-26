@@ -1,5 +1,5 @@
 const bookContainer = document.getElementById("books-container");
-const sbmBtn = document.querySelector("#submitButton");
+const sbmBtn = document.querySelector("#showHistory");
 const searchInp = document.getElementById("searchInput");
 
 const renderbooks = async () => {
