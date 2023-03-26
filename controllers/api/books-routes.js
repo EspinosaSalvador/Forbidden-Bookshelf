@@ -1,31 +1,28 @@
 const router = require("express").Router();
 const { Book } = require("../../models");
 const dotenv = require("dotenv");
-
-
+const { query } = require("express");
 
 // ! get
-// GET book information from Google Books API
+// API changes:
 router.get("/getBooks", async (req, res) => {
-  console.log("TEST!")
+  console.log("TEST!");
   try {
     const apiKey = process.env.API_KEY;
-    const {searchQuery} = req.query;
-    const requestUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}`;
-    // TODO: Try with  const requestUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}&fields=items(volumeInfo(title,authors,description,imageLinks(thumbnail)))`;
+    const searchQuery = req.query.searchQuery;
+    const requestUrl = `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}&fields=items(volumeInfo(title,authors,description,imageLinks(thumbnail)))`;
 
-    
-  const response = await fetch(requestUrl)
-  const data = await response.json()
+    const response = await fetch(requestUrl);
+    const data = await response.json();
 
-  console.log(data)
+    console.log(data);
+    console.log(searchQuery);
 
     res.status(200).json(data);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 
 //Get all books
 
@@ -68,8 +65,5 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
-
-
 
 module.exports = router;

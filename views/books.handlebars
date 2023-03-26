@@ -61,12 +61,21 @@
 
 </body>
 
+{{!-- ! search button start --}}
+
 <div class="center">
   <input type="text" id="searchInput" placeholder="Search..." />
+  
+ 
 
-  <button type="button"
+  <button type="button " id="submitButton"
     class="rounded-md bg-indigo-600 py-1.5 px-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Search!</button>
+    <div id="books-container"></div>
 </div>
+
+{{!-- !search Button end --}}
+
+{{!-- ! create tables --}}
 
 <div class="bg-stone mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
   <h2>Your Library</h2><br>
@@ -175,3 +184,5 @@
     backface-visibility: visible;
   }
 </style>
+
+<script src="/js/google-books-api.js"></script>
