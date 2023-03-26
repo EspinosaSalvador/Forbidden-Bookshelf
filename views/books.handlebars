@@ -76,32 +76,24 @@ function showSlides() {
     <div
       class="bg-stone grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
     >
-      <a href="#" class="group">
-        <div
-          class=" overflow-hidden  bg-stone  full-pic"
-        >
-          <img
-            src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679626512/content_qzd7eu.jpg"
-            alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
-            class="h-full w-full object-cover object-center group-hover:opacity-75"
-          />
+      <a href="#" class="group book">
+        <div class="overflow-hidden bg-stone full-pic book-inner">
+          <div class="book-front">
+            <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679626512/content_qzd7eu.jpg"
+              alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+              class="h-full w-full object-cover object-center group-hover:opacity-75" />
+          </div>
+          <div class="book-back bg-white p-4">
+            <h3 class="text-sm text-gray-700">Autor: J.K. Rowling</h3>
+            <p class="text-xs text-gray-500">
+              Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se
+              describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y
+              Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.
+            </p>
+          </div>
         </div>
         <h3 class="mt-4 text-sm text-gray-700">Harry Potter</h3>
         <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
-      </a>
-
-      <a href="#" class="group">
-        <div
-          class="overflow-hidden bg-stone full-pic"
-        >
-          <img
-            src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/51OwMSETOJL_rmnxrg.jpg"
-            alt="Olive drab green insulated bottle with flared screw lid and flat top."
-            class="h-full w-full object-cover object-center group-hover:opacity-75"200
-          />
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700">Lord of the Rings</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
       </a>
 
       <a href="#" class="group">
@@ -150,36 +142,42 @@ function showSlides() {
 </div>
 <!-- ! end of books -->
 <style>
-  .book-card {
-    perspective: 1000px;
-  }
+ <style>
+.book {
+  perspective: 1000px;
+  display: inline-block;
+}
 
-  .book-card-inner {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
+.book-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
 
-  .book-card:hover .book-card-inner {
-    transform: rotateY(180deg);
-  }
+.book:hover .book-inner {
+  transform: rotateY(180deg);
+}
 
-  .book-card-front,
-  .book-card-back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+.book-front,
+.book-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  .book-card-back {
-    transform: rotateY(180deg);
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
+.book-front {
+  backface-visibility: hidden;
+}
+
+.book-back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.book:hover .book-back {
+  backface-visibility: visible;
+}
+
 </style>
