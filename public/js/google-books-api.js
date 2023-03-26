@@ -25,13 +25,17 @@ const renderbooks = async () => {
       bookElem.classList.add("book");
 
       bookElem.innerHTML = `
-        <h2>${book.volumeInfo.title}</h2>
-        <p>Author: ${book.volumeInfo.authors.join(", ")}</p>
-        <p>Description: ${book.volumeInfo.description}</p>
-        <img src="${book.volumeInfo.imageLinks.thumbnail}" alt="${
-        book.volumeInfo.title
-      } thumbnail" />
-        <button class="add-btn"> Add to collection</button>
+        <div class="book-card">
+  <img class="book-thumbnail" src="${
+    book.volumeInfo.imageLinks.thumbnail
+  }" alt="${book.volumeInfo.title} thumbnail" />
+  <div class="book-info">
+    <h2 class="book-title">${book.volumeInfo.title}</h2>
+    <p class="book-author">Author: ${book.volumeInfo.authors.join(", ")}</p>
+    <p class="book-description">Description: ${book.volumeInfo.description}</p>
+    <button id="add-btn" class="add-btn">Add to collection</button>
+  </div>
+</div>
       `;
       booksContainer.appendChild(bookElem);
     });
