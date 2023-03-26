@@ -2,7 +2,7 @@
 
 const sequelize = require('../config/connection');
 const seedBook = require('./bookData');
-const seedAuthor = require('./authorData');
+
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -10,7 +10,7 @@ const seedAll = async () => {
 
   await seedBook();
 
-  await seedAuthor();
+
 
 
 
