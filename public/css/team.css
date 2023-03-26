@@ -1,0 +1,43 @@
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.team-member-img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.team-member-name {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.team-member-role {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #777;
+}
+
+.team-member-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.team-member-icons a {
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.team-member-icons a:hover {
+  color: #333;
+}
+.circle {
+  border-radius: 12rem;
+}

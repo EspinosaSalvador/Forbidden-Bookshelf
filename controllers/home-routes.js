@@ -1,18 +1,16 @@
-const router = require('express').Router();
-const { Author } = require('../models');
-const { Book } = require('../models')
+const router = require("express").Router();
+const { Author } = require("../models");
+const { Book } = require("../models");
 const { User } = require("../models");
 
 //Renders main page
 router.get("/", async (req, res) => {
-
-
   res.render("books");
 });
 
 //Renders login Page
-router.get('/login', (req, res) => {
-  res.render('login');
+router.get("/login", (req, res) => {
+  res.render("login");
 });
 
 //Renders the FAQ Page
@@ -29,10 +27,9 @@ router.get("/company", async (req, res) => {
 router.get("/team", async (req, res) => {
   res.render("team");
 });
-
-
-
-
-
+// Rednder Data History Page
+router.get("/history", async (req, res) => {
+  res.render("history");
+});
 
 module.exports = router;
