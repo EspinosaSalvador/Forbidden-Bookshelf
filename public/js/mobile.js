@@ -1,12 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const closeMenuButton = document.getElementById("closeMenuButton");
-//   const mobileMenu = document.getElementById("mobileMenu");
-
-//   closeMenuButton.addEventListener("click", function () {
-//     mobileMenu.style.display = "none";
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const openMenuButton = document.getElementById("openMenuButton");
   const closeMenuButton = document.getElementById("closeMenuButton");
