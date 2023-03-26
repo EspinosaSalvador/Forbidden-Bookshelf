@@ -1,9 +1,8 @@
 const bookContainer = document.getElementById("books-container");
-const sbmBtn = document.querySelector("#showHistory");
+const showHistory = document.querySelector("#showHistory");
 const searchInp = document.getElementById("searchInput");
 
 const renderbooks = async () => {
-  const searchQuery = searchInp.value; // get value of search input
   const response = await fetch(`/api/book`, {
     method: "GET",
     headers: { "Content-Type": "application/json" },
@@ -41,4 +40,4 @@ const renderbooks = async () => {
   }
 };
 
-sbmBtn.addEventListener("click", renderbooks);
+showHistory.addEventListener("click", renderbooks);
