@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/input-build.css" />
 
     <link rel="stylesheet" href="./css/input.css" />
+
     <title>Forbidden Bookshelf</title>
   </head>
 
@@ -48,6 +49,10 @@
             href="/company"
             class="text-sm font-semibold leading-6 text-gray-900"
           >Company</a>
+          <a
+            href="/history"
+            class="text-sm font-semibold leading-6 text-gray-900"
+          >History</a>
         </div>
         <div class="flex flex-1 items-center justify-end gap-x-6">
         </div>
@@ -88,8 +93,9 @@
       <ul id="searchResults">
         <!-- search results will be displayed here -->
       </ul>
-      <!-- Mobile menu, show/hide based on menu open state. -->
-      <div class="lg:hidden" role="dialog" aria-modal="true">
+      <!-- ! Mobile menu, show/hide based on menu open state. -->
+      <div id="mobileMenu" class="lg:hidden" role="dialog" aria-modal="true">
+
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-10"></div>
         <div
@@ -108,21 +114,19 @@
               href="#"
               class="ml-auto rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >Sign up</a>
-            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <!-- Botón para abrir el menú -->
+            <button id="openMenuButton" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Open menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+            
+            <!-- Botón para cerrar el menú -->
+            <button id="closeMenuButton" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
               <span class="sr-only">Close menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                ></path>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
           </div>
@@ -130,24 +134,28 @@
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
                 <a
-                  href="#"
+                  href="/team"
                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Product</a>
+                >Team</a>
 
                 <a
-                  href="#"
+                  href="/FAQ"
                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Features</a>
+                >FAQ</a>
 
                 <a
-                  href="#"
+                  href="/"
                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Marketplace</a>
+                >Home</a>
 
                 <a
-                  href="#"
+                  href="/company"
                   class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >Company</a>
+                <a
+                  href="/history"
+                  class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >History</a>
               </div>
               <div class="py-6">
                 <a
@@ -439,7 +447,13 @@
     </footer>
     <script src="/js/login.js"></script>
     <script src="../../public/javascript/books.js"></script>
+
+  
+
     <script src="/js/logout.js"></script>
+    
+    <script src="/js/mobile.js"></script>
+
 
     <!-- ! end of footer -->
 

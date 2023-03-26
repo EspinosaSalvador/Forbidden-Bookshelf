@@ -1,0 +1,79 @@
+.team-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.team-member-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.team-member-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.team-member-role {
+  font-size: 1rem;
+  color: #4a5568;
+  text-align: center;
+}
+
+.team-member-social {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding-left: 0;
+}
+.circle {
+  border-radius: 12rem;
+}
+
+.team-list {
+  list-style: none;
+  padding: 0;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.member-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.github-icon {
+  /* Estilos para el ícono de GitHub (color, tamaño, etc.) */
+}
