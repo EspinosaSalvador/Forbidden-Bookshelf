@@ -1,183 +1,188 @@
-
-
 </head>
+
 <body class="bg-stone">
 
-{{!-- <h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p> --}}
+  {{!-- <h2>Automatic Slideshow</h2>
+  <p>Change image every 2 seconds:</p> --}}
 
-<div class="slideshow-container bg-stone ">
+  <div class="slideshow-container bg-stone ">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/Ca29a8jXEAA7XRK_ygbqn9.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/Ca29a8jXEAA7XRK_ygbqn9.jpg"
+        style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/81KSwdILwIL_dcu4uu.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/81KSwdILwIL_dcu4uu.jpg"
+        style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/51OwMSETOJL_rmnxrg.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/51OwMSETOJL_rmnxrg.jpg"
+        style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
 
-</div>
-<br>
+  </div>
+  <br>
 
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 
-<script>
-let slideIndex = 0;
-showSlides();
+  <script>
+    let slideIndex = 0;
+    showSlides();
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
-}
-</script>
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+  </script>
 
 </body>
 
+{{!-- ! search button start --}}
+
 <div class="center">
-        <input type="text" id="searchInput" placeholder="Search..." />
+  <input type="text" id="searchInput" placeholder="Search..." />
+  
+ 
 
-        <button
-          type="button"
-          class="rounded-md bg-indigo-600 py-1.5 px-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >Search!</button>
+  <button type="button " id="submitButton"
+    class="rounded-md bg-indigo-600 py-1.5 px-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Search!</button>
+    <div id="books-container"></div>
+</div>
+
+{{!-- !search Button end --}}
+
+{{!-- ! create tables --}}
+
+<div class="bg-stone mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+  <h2>Your Library</h2><br>
+
+  <div class="bg-stone grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+    <a href="#" class="group book">
+      <div class="overflow-hidden bg-stone full-pic book-inner">
+        <div class="book-front">
+          <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679626512/content_qzd7eu.jpg"
+            alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+            class="h-full w-full object-cover object-center group-hover:opacity-75" />
+        </div>
+        <div class="book-back bg-white p-4">
+          <h3 class="text-sm text-gray-700">Autor: J.K. Rowling</h3>
+          <p class="text-xs text-gray-500">
+            Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se
+            describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger
+            y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.
+          </p>
+        </div>
       </div>
+      <h3 class="mt-4 text-sm text-gray-700">Harry Potter</h3>
+      <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
+    </a>
 
-  <div
-    class="bg-stone mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
-  >
-    <h2 >Your Library</h2><br>
 
-    <div
-      class="bg-stone grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
-    >
-      <a href="#" class="group book">
-        <div class="overflow-hidden bg-stone full-pic book-inner">
-          <div class="book-front">
-            <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679626512/content_qzd7eu.jpg"
-              alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
-              class="h-full w-full object-cover object-center group-hover:opacity-75" />
-          </div>
-          <div class="book-back bg-white p-4">
-            <h3 class="text-sm text-gray-700">Autor: J.K. Rowling</h3>
-            <p class="text-xs text-gray-500">
-              Harry Potter es una serie de novelas fantásticas escrita por la autora británica J. K. Rowling, en la que se
-              describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y
-              Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería.
-            </p>
-          </div>
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700">Harry Potter</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$48</p>
-      </a>
+    <a href="#" class="group">
+      <div class="overflow-hidden bg-stone full-pic">
+        <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/51OwMSETOJL_rmnxrg.jpg"
+          alt="Olive drab green insulated bottle with flared screw lid and flat top."
+          class="h-full w-full object-cover object-center group-hover:opacity-75" 200 />
+      </div>
+      <h3 class="mt-4 text-sm text-gray-700">Lord of the Rings</h3>
+      <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+    </a>
 
-      <a href="#" class="group">
-        <div
-          class=" overflow-hidden  bg-stone full-pic"
-        >
-          <img
-            src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/32846507-288-k268799_pdbmfa.jpg"
-            alt="Person using a pen to cross a task off a productivity paper card."
-            class="h-full w-full object-cover object-center group-hover:opacity-75"
-          />
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700">Boku No Pico</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
-      </a>
+    <a href="#" class="group">
+      <div class=" overflow-hidden  bg-stone full-pic">
+        <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/32846507-288-k268799_pdbmfa.jpg"
+          alt="Person using a pen to cross a task off a productivity paper card."
+          class="h-full w-full object-cover object-center group-hover:opacity-75" />
+      </div>
+      <h3 class="mt-4 text-sm text-gray-700">Boku No Pico</h3>
+      <p class="mt-1 text-lg font-medium text-gray-900">$89</p>
+    </a>
 
-      <a href="#" class="group">
-        <div
-          class=" overflow-hidden  bg-stone full-pic"
-        >
-          <img
-            src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/51QJNM8W8AL_v6kqk9.jpg"
-            alt="Hand holding black machined steel mechanical pencil with brass tip and top."
-            class="h-full w-full object-cover object-center group-hover:opacity-75"
-          />
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700">Desperation</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-      </a>
-      <a href="#" class="group">
-        <div
-          class=" overflow-hidden  bg-stone full-pic"
-        >
-          <img
-            src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/81KSwdILwIL_dcu4uu.jpg"
-            alt="Hand holding black machined steel mechanical pencil with brass tip and top."
-            class="h-full w-full object-cover object-center group-hover:opacity-75"
-          />
-        </div>
-        <h3 class="mt-4 text-sm text-gray-700">Donald Trump</h3>
-        <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
-      </a>
-      <!-- More products... -->
-    </div>
+    <a href="#" class="group">
+      <div class=" overflow-hidden  bg-stone full-pic">
+        <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/51QJNM8W8AL_v6kqk9.jpg"
+          alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+          class="h-full w-full object-cover object-center group-hover:opacity-75" />
+      </div>
+      <h3 class="mt-4 text-sm text-gray-700">Desperation</h3>
+      <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+    </a>
+    <a href="#" class="group">
+      <div class=" overflow-hidden  bg-stone full-pic">
+        <img src="https://res.cloudinary.com/dm7phzl7a/image/upload/v1679625208/81KSwdILwIL_dcu4uu.jpg"
+          alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+          class="h-full w-full object-cover object-center group-hover:opacity-75" />
+      </div>
+      <h3 class="mt-4 text-sm text-gray-700">Donald Trump</h3>
+      <p class="mt-1 text-lg font-medium text-gray-900">$35</p>
+    </a>
+    <!-- More products... -->
   </div>
 </div>
+</div>
 <!-- ! end of books -->
+
 <style>
- <style>
-.book {
-  perspective: 1000px;
-  display: inline-block;
-}
+  .book {
+    perspective: 1000px;
+    display: inline-block;
+  }
 
-.book-inner {
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
+  .book-inner {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
 
-.book:hover .book-inner {
-  transform: rotateY(180deg);
-}
+  .book:hover .book-inner {
+    transform: rotateY(180deg);
+  }
 
-.book-front,
-.book-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+  .book-front,
+  .book-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-.book-front {
-  backface-visibility: hidden;
-}
+  .book-front {
+    backface-visibility: hidden;
+  }
 
-.book-back {
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.9);
-}
+  .book-back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
 
-.book:hover .book-back {
-  backface-visibility: visible;
-}
-
+  .book:hover .book-back {
+    backface-visibility: visible;
+  }
 </style>
+
+<script src="/js/google-books-api.js"></script>
