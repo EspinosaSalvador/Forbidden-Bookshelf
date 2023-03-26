@@ -149,3 +149,37 @@ function showSlides() {
   </div>
 </div>
 <!-- ! end of books -->
+<style>
+  .book-card {
+    perspective: 1000px;
+  }
+
+  .book-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .book-card:hover .book-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .book-card-front,
+  .book-card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .book-card-back {
+    transform: rotateY(180deg);
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+</style>
