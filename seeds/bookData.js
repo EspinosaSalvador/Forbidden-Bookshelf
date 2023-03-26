@@ -6,20 +6,28 @@ const { Book } = require('../models');
 
 const bookdata = [
   {
-    book_name: "Nausea",
-    book_author: 1,
+    book_name: "Book 1",
+    book_author: "Author 1",
+    book_description: "Description of book 1",
+    book_image: "http://books.google.com/books/content?id=KZjY_nddixEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   },
   {
-    book_name: "The Old Man and the Sea",
-    book_author: 2,
+    book_name: "Book 2",
+    book_author: "Author 2",
+    book_description: "Description of book 2",
+    book_image: "http://books.google.com/books/content?id=KZjY_nddixEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   },
   {
-    book_name: "The Raven",
-    book_author: 3,
+    book_name: "Book 3",
+    book_author: "Author 3",
+    book_description: "Description of book 3",
+    book_image: "http://books.google.com/books/content?id=KZjY_nddixEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   },
   {
-    book_name: "Harry Potter",
-    book_author: 4,
+    book_name: "Book 4",
+    book_author: "Author 4",
+    book_description: "Description of book 5",
+    book_image: "http://books.google.com/books/content?id=KZjY_nddixEC&printsec=frontcover&img=1&zoom=1&source=gbs_api",
   },
 ];
 

@@ -6,7 +6,6 @@ const { query } = require("express");
 // ! get
 // API changes:
 router.get("/getBooks", async (req, res) => {
-  console.log("TEST!");
   try {
     const apiKey = process.env.API_KEY;
     const searchQuery = req.query.searchQuery;
@@ -25,7 +24,6 @@ router.get("/getBooks", async (req, res) => {
 });
 
 //Get all books
-
 router.get("/", async (req, res) => {
   try {
     const books = await Book.findAll();
@@ -54,10 +52,12 @@ router.get("/:id", async (req, res) => {
 //Post new books
 router.post("/", async (req, res) => {
   try {
-    const { book_name, book_author } = req.body;
+    const { book_name, book_author, book_description, book_image } = req.body;
     const newBook = await Book.create({
       book_name,
       book_author,
+      book_description,
+      book_image
     });
 
     res.status(200).json(newBook);

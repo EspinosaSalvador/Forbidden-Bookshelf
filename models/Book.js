@@ -18,12 +18,16 @@ Book.init(
       allowNull: false,
     },
     book_author:{
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
-      reference: {
-        model:"author",
-        key:"id",
-      }
+    },
+    book_description:{
+      type:DataTypes.STRING(1234),
+      allowNull: false,
+    },
+    book_image:{
+      type:DataTypes.STRING(1234),
+      allowNull: false,
     },
   },
   {
