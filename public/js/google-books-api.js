@@ -31,7 +31,7 @@ const renderbooks = async () => {
         <img src="${book.volumeInfo.imageLinks.thumbnail}" alt="${
         book.volumeInfo.title
       } thumbnail" />
-        <button class="add-btn"> Add to collection</button>
+        <button class="add-btn" onclick="addBook('${book.volumeInfo.title}', '${book.volumeInfo.authors.join(", ")}', '${book.volumeInfo.description}')"> Add to collection</button>
       `;
       booksContainer.appendChild(bookElem);
     });
@@ -40,4 +40,28 @@ const renderbooks = async () => {
   }
 };
 
+const addBook = async (title, author, description) => {
+  const response = await fetch("/api/book", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      book_name: title,
+      book_author: author,
+      book_description: description,
+      book_image: "some image url",
+    }),
+  });
+
+  if (response.ok) {
+    const newBook = await response.json();
+    console.log("New book added:", newBook);
+    alert("Book added to collection!");
+  } else {
+    alert("Failed to add book");
+  }
+};
+
 sbmBtn.addEventListener("click", renderbooks);
+
+
+
