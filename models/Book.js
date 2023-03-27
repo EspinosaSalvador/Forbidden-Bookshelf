@@ -1,7 +1,7 @@
 //Model to create book table and will have a column for ID, bookname and the book author
 //For the book author, we are using the primary key to link the Author to the book
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Book extends Model {}
 
@@ -17,16 +17,16 @@ Book.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    book_author:{
+    book_author: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    book_description:{
-      type:DataTypes.STRING(1234),
+    book_description: {
+      type: DataTypes.STRING(1234),
       allowNull: false,
     },
-    book_image:{
-      type:DataTypes.STRING(1234),
+    book_image: {
+      type: DataTypes.STRING(1234),
       allowNull: false,
     },
   },
@@ -34,7 +34,7 @@ Book.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'book',
+    modelName: "book",
   }
 );
 
