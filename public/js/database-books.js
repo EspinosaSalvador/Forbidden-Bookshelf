@@ -1,3 +1,6 @@
+//function to render all the books from the database
+
+
 const showHistory = document.querySelector("#showHistory");
 const booksContainer = document.querySelector("#books-container");
 
