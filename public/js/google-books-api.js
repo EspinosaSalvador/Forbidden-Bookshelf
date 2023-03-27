@@ -14,8 +14,7 @@ const renderbooks = async () => {
 
   if (response.ok) {
     const books = await response.json();
-    console.log(books);
-    console.log(typeof books);
+
     const booksContainer = document.querySelector("#books-container");
 
     booksContainer.innerHTML = "";
@@ -66,7 +65,7 @@ const addBook = async (title, author, description, image) => {
 
   if (response.ok) {
     const newBook = await response.json();
-    console.log("New book added:", newBook);
+
     alert("Book added to collection!");
   } else {
     alert("Failed to add book");
