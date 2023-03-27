@@ -16,7 +16,11 @@
 /* #side {
   position: absolute;
 } */
-background-color: bg-stone * {
+.bg-stone {
+  background-color: rgb(255 251 235);
+}
+* {
+  margin: rgb(255 251 235);
   box-sizing: border-box;
 }
 body {
