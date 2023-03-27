@@ -15,8 +15,9 @@
               aria-controls="faq-0"
               aria-expanded="false"
             >
-              <span class="text-base font-semibold leading-7">What&#039;s the
-                best thing about Switzerland?</span>
+              <span class="text-base font-semibold leading-7">What is the Google
+                Books API and how does it work in our online library?
+              </span>
               <span class="ml-6 flex h-7 items-center">
                 <!--
                       Icon when question is collapsed.
@@ -61,9 +62,11 @@
           </dt>
           <dd class="mt-2 pr-12" id="faq-0">
             <p class="text-base leading-7 text-gray-600">
-              I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quas cupiditate laboriosam
-              fugiat.
+              The Google Books API is an interface provided by Google that
+              allows access to the data and functionality of the Google Books
+              service. It works in an online library by enabling users to search
+              for and retrieve information about books, including their titles,
+              authors, descriptions, and other metadata.
             </p>
           </dd>
         </div>
@@ -76,8 +79,8 @@
               aria-controls="faq-0"
               aria-expanded="false"
             >
-              <span class="text-base font-semibold leading-7">What&#039;s the
-                best thing about Switzerland?</span>
+              <span class="text-base font-semibold leading-7">How can I search
+                for a book?</span>
               <span class="ml-6 flex h-7 items-center">
                 <!--
                       Icon when question is collapsed.
@@ -122,9 +125,10 @@
           </dt>
           <dd class="mt-2 pr-12" id="faq-0">
             <p class="text-base leading-7 text-gray-600">
-              I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quas cupiditate laboriosam
-              fugiat.
+              To search for a book, users can enter keywords, titles, authors,
+              or ISBNs into the search bar and click the search button. The
+              library's search engine will then return a list of books that
+              match the search criteria.
             </p>
           </dd>
         </div>
@@ -137,8 +141,8 @@
               aria-controls="faq-0"
               aria-expanded="false"
             >
-              <span class="text-base font-semibold leading-7">What&#039;s the
-                best thing about Switzerland?</span>
+              <span class="text-base font-semibold leading-7">What type of
+                information is displayed about each book?</span>
               <span class="ml-6 flex h-7 items-center">
                 <!--
                       Icon when question is collapsed.
@@ -183,9 +187,9 @@
           </dt>
           <dd class="mt-2 pr-12" id="faq-0">
             <p class="text-base leading-7 text-gray-600">
-              I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quas cupiditate laboriosam
-              fugiat.
+              The type of information displayed about each book includes the
+              book's title, author, publication date, description, and cover
+              image.
             </p>
           </dd>
         </div>
@@ -198,8 +202,9 @@
               aria-controls="faq-0"
               aria-expanded="false"
             >
-              <span class="text-base font-semibold leading-7">What&#039;s the
-                best thing about Switzerland?</span>
+              <span class="text-base font-semibold leading-7">
+                Can I preview a book before deciding to add it to my collection?
+              </span>
               <span class="ml-6 flex h-7 items-center">
                 <!--
                       Icon when question is collapsed.
@@ -244,9 +249,7 @@
           </dt>
           <dd class="mt-2 pr-12" id="faq-0">
             <p class="text-base leading-7 text-gray-600">
-              I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quas cupiditate laboriosam
-              fugiat.
+              Users can only see the description of the book.
             </p>
           </dd>
         </div>
@@ -259,8 +262,8 @@
               aria-controls="faq-0"
               aria-expanded="false"
             >
-              <span class="text-base font-semibold leading-7">What&#039;s the
-                best thing about Switzerland?</span>
+              <span class="text-base font-semibold leading-7">How can I add a
+                book to my personal collection in the online library?</span>
               <span class="ml-6 flex h-7 items-center">
                 <!--
                       Icon when question is collapsed.
@@ -305,13 +308,13 @@
           </dt>
           <dd class="mt-2 pr-12" id="faq-0">
             <p class="text-base leading-7 text-gray-600">
-              I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Quas cupiditate laboriosam
-              fugiat.
+              To add a book to their personal collection in the online library,
+              users can click on the "Add to Collection" button next to the book
+              they want to add. They will then be prompted to log in to their
+              account, or create one if they don't already have one.
             </p>
           </dd>
         </div>
-        
 
         <!-- More questions... -->
       </dl>
@@ -322,29 +325,19 @@
 <!-- ! end of FAQS -->
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-      const faqButtons = document.querySelectorAll("button[aria-controls]");
-
-      faqButtons.forEach((button) => {
-        button.addEventListener("click", (event) => {
-          const targetId = event.currentTarget.getAttribute("aria-controls");
-          const targetElement = document.getElementById(targetId);
-          const isExpanded =
-            event.currentTarget.getAttribute("aria-expanded") === "true";
-
-          // Expandir o colapsar el contenido de la pregunta
-          targetElement.style.display = isExpanded ? "none" : "block";
-
-          // Cambiar el atributo aria-expanded
-          event.currentTarget.setAttribute("aria-expanded", !isExpanded);
-
-          // Cambiar la visibilidad del ícono de colapso
-          const collapseIcon = event.currentTarget.querySelector(".collapse-icon");
-          const expandIcon = event.currentTarget.querySelector(".expand-icon");
-          collapseIcon.classList.toggle("hidden");
-          expandIcon.classList.toggle("hidden");
-        });
-      });
-    });
+  document.addEventListener("DOMContentLoaded", () => { const faqButtons =
+  document.querySelectorAll("button[aria-controls]");
+  faqButtons.forEach((button) => { button.addEventListener("click", (event) => {
+  const targetId = event.currentTarget.getAttribute("aria-controls"); const
+  targetElement = document.getElementById(targetId); const isExpanded =
+  event.currentTarget.getAttribute("aria-expanded") === "true"; // Expandir o
+  colapsar el contenido de la pregunta targetElement.style.display = isExpanded
+  ? "none" : "block"; // Cambiar el atributo aria-expanded
+  event.currentTarget.setAttribute("aria-expanded", !isExpanded); // Cambiar la
+  visibilidad del ícono de colapso const collapseIcon =
+  event.currentTarget.querySelector(".collapse-icon"); const expandIcon =
+  event.currentTarget.querySelector(".expand-icon");
+  collapseIcon.classList.toggle("hidden");
+  expandIcon.classList.toggle("hidden"); }); }); });
 
 </script>
