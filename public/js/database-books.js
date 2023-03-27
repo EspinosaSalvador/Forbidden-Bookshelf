@@ -27,7 +27,6 @@ const renderbooks = async () => {
             <h2>${book.book_name}</h2>
             <p>Author: ${book.book_author}</p>
             <p>Description: ${book.book_description}</p>
-            <button id="add-btn">Add to collection</button>
           </div>
         </div>
       `;

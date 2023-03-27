@@ -28,12 +28,12 @@ router.get("/team", withAuth, async (req, res) => {
   res.render("team", { logged_in: req.session.logged_in });
 });
 // Rednder Data History Page
-router.get("/history", async (req, res) => {
-  res.render("history");
+router.get("/history", withAuth,  async (req, res) => {
+  res.render("history", { logged_in: req.session.logged_in });
 });
 //Renders main page
-router.get("/comingsoon", async (req, res) => {
-  res.render("comingsoon");
+router.get("/comingsoon", withAuth, async (req, res) => {
+  res.render("comingsoon", { logged_in: req.session.logged_in });
 });
 //Renders coming soon page
 
